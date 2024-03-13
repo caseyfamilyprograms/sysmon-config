@@ -228,10 +228,8 @@
 			<!--SECTION: Google-->
 			<CommandLine condition="begin with">"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --type=</CommandLine> <!--Google:Chrome: massive command-line arguments-->
 			<CommandLine condition="begin with">"C:\Program Files\Google\Chrome\Application\chrome.exe" --type=</CommandLine> <!--Google:Chrome: massive command-line arguments-->
-			<!--SECTION: CFP specific rules -->
+			<!--SECTION: custom rules -->
 			<CommandLine condition="contains">davclnt.dll,DavSetCookie</CommandLine> <!-- Accessing UNC via webdav, very noisy -->			
-			<CommandLine condition="is">C:\WINDOWS\system32\PrintIsolationHost.exe -Embedding</CommandLine> <!-- Print spooler process -->			
-			<Image condition="is">C:\Windows\System32\wbem\WmiPrvSE.exe</Image> <!--Microsoft:Windows: WMI-->
 			<CommandLine condition="is">C:\Windows\System32\svchost.exe -k GPSvcGroup</CommandLine> <!--Microsoft:Group policy client-->
 			<!--SECTION: Microsoft:System Center-->
             <Image condition="is">c:\Windows\CCM\SCNotification.exe</Image> 
